@@ -1,6 +1,7 @@
 /******************************************************************************
 This is my first C++ code of the 2022 year
 Author: Fabien Felix
+contribute to the code on github: https://github.com/midibody/HappyNewYear/blob/main/happyNewYear.cpp
 *******************************************************************************/
 #include <iostream>
 #include <ctime>
