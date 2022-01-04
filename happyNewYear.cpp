@@ -16,7 +16,7 @@ const bool goodResolutions = false;         // It was set to true in previous re
 
 const bool funAtWork = true;                // you can set it to false but the CPU impact will be huge and the code might crash
 
-const bool enjoyIn_Amadeus_TEC = true;      // was initially a global variable. I changed into a constant as the complex function to compute it was always returning 'true' and I want to be green.
+const bool enjoyInAmadeus = true;           // I changed into a constant, as the initial complex function to compute it was always returning 'true' and I want to be green.
                                             // As it is used a bit everywhere in the code, its less risky to not remove it (and I have to deliver my user story in rush). 
                                             // The maintenance team will cleanup ... 
                                             
@@ -32,7 +32,7 @@ int main()
     {
         cout<<"Happy New year!";
         
-        if (funAtWork && enjoyIn_Amadeus_TEC) cout<<"\nIt will be super cool :)\n";
+        if (funAtWork && enjoyInAmadeus) cout<<"\nIt will be super cool :)\n";
             
         srand(time(0));
         noMoreCovid=rand() %2; // mostly random, as the vovid variant
