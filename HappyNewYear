@@ -2,12 +2,10 @@
 This is my first C++ code of the 2022 year
 Author: Fabien Felix
 *******************************************************************************/
-//#include <fun>
-//#include <AmadeusFriends>
-
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <random>
 using namespace std;
 
 const bool goodResolutions = false;         // It was set to true in previous releases but the QA manager rejected it was blocking the test scenario 'reallife_2021'. 
@@ -15,29 +13,28 @@ const bool goodResolutions = false;         // It was set to true in previous re
 
 const bool funAtWork = true;                // you can set it to false but the CPU impact will be huge and the code might crash
 
-const bool enjoyIn_TEC = true;               // was initially a global variable. I changed into a constant as the function to compute it was always returning 'true'.
-                                            // As it is used a bit everywhere in the code, better not to remove it as I have to deliver my user story in rush. 
-                                            // The maintenance team will cleanup :) 
+const bool enjoyIn_Amadeus_TEC = true;      // was initially a global variable. I changed into a constant as the complex function to compute it was always returning 'true' and I want to be green.
+                                            // As it is used a bit everywhere in the code, its easier to not remove it (and I have to deliver my user story in rush). 
+                                            // The maintenance team will cleanup ... 
                                             
-bool noMoreFuckingCovid = rand() % 2;       // I tried to use the Data plateform with AI/ML to forecast this boolean, but after several months in prod the customers were complaining. 
+int noMoreCovid;                            // I tried to use the Data plateform with AI/ML to forecast this boolean an intelligent way, 
+                                            // but after several months in prod the customers were complaining about it. 
                                             // So, let's put a random, nobody will notice the difference
-
 int main()
 {
   time_t t = std::time(nullptr);
   tm *const pTInfo = std::localtime(&t);
 
-
   if (pTInfo->tm_year + 1900 == 2022) 
     {
         cout<<"Happy New year!";
         
-        if (funAtWork && enjoyIn_TEC)  
-            cout<<"\nIt will be super cool :)";
-        
-        if (noMoreFuckingCovid)
-            cout<<"\nBook your flight NOW";
-        else cout<<"\nBook anyhow for later";
+        if (funAtWork && enjoyIn_TEC) cout<<"\nIt will be super cool :)\n";
+            
+        srand(time(0));
+        noMoreCovid=rand() %2; // mostly random, as the vovid variant
+       
+        if (noMoreCovid)    cout<<"\n Book your flight NOW";
+        else                cout<<"\n Keep your money for future travel";
     }
-
 }
