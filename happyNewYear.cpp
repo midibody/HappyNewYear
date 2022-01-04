@@ -1,8 +1,10 @@
 /******************************************************************************
 This is my first C++ code of the 2022 year
 Author: Fabien Felix
-contribute to the code on github: https://github.com/midibody/HappyNewYear/blob/main/happyNewYear.cpp
+Contribute to the code on github: https://github.com/midibody/HappyNewYear/blob/main/happyNewYear.cpp
+Test it with the online compiler: https://www.onlinegdb.com/online_c++_compiler
 *******************************************************************************/
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -15,7 +17,7 @@ const bool goodResolutions = false;         // It was set to true in previous re
 const bool funAtWork = true;                // you can set it to false but the CPU impact will be huge and the code might crash
 
 const bool enjoyIn_Amadeus_TEC = true;      // was initially a global variable. I changed into a constant as the complex function to compute it was always returning 'true' and I want to be green.
-                                            // As it is used a bit everywhere in the code, its easier to not remove it (and I have to deliver my user story in rush). 
+                                            // As it is used a bit everywhere in the code, its less risky to not remove it (and I have to deliver my user story in rush). 
                                             // The maintenance team will cleanup ... 
                                             
 int noMoreCovid;                            // I tried to use the Data plateform with AI/ML to forecast this boolean an intelligent way, 
@@ -30,7 +32,7 @@ int main()
     {
         cout<<"Happy New year!";
         
-        if (funAtWork && enjoyIn_TEC) cout<<"\nIt will be super cool :)\n";
+        if (funAtWork && enjoyIn_Amadeus_TEC) cout<<"\nIt will be super cool :)\n";
             
         srand(time(0));
         noMoreCovid=rand() %2; // mostly random, as the vovid variant
